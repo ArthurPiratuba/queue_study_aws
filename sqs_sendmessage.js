@@ -11,7 +11,7 @@ var params = {
     MessageAttributes: {
         "Atributo1": {
             DataType: "String",
-            StringValue: "The Whistler"
+            StringValue: "Valor de teste do atributo"
         },
         "Atributo2": {
             DataType: "Number",
