@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { v4: uuid } = require('uuid');
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
@@ -18,8 +19,8 @@ var params = {
             StringValue: "6"
         }
     },
-    MessageBody: "Corpo de teste",
-    MessageDeduplicationId: "1",  // Required for FIFO queues
+    MessageBody: "Corpo de testes",
+    MessageDeduplicationId: uuid(),  // Required for FIFO queues
     MessageGroupId: "1",  // Required for FIFO queues
     QueueUrl: process.env.SQS_URL
 };
